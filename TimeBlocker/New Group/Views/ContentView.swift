@@ -27,11 +27,22 @@ struct ContentView: View {
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }
+                
+                NavigationLink(destination: SettingsView()) {
+                    Text("Go to Settings")
+                        .padding()
+                        .background(Color.green)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
             }
+            .navigationTitle("Home")
             .padding()
         }
     }
 }
+
+
 
 #Preview {
     ContentView()
