@@ -9,13 +9,27 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            VStack(spacing: 20) {
+                Text("FocusScore")
+                    .font(.largeTitle)
+                    .bold()
+                        
+                Text("Welcome! This is your home screen.")
+                    .foregroundColor(.gray)
+                        
+                Button(action: {
+                    print("Block Instagram tapped")
+                }) {
+                    Text("Block Instagram for 1 hour")
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+            }
+            .padding()
         }
-        .padding()
     }
 }
 
